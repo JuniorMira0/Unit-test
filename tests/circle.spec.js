@@ -38,8 +38,12 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
     expect(Object.keys(circle(1)).length).toBe(3);
   });
   // Teste se a função, quando não recebe nenhum parâmetro, retorna undefined.
-
+  it('verifica se quando não há parametro o retorno é undefined', () => {
+    expect(circle(' ')).toBe(undefined);
+  });
   // Teste se dentro do objeto retornado, a função retorna uma key com value igual a circunferência correta para um círculo de raio 2.
+  expect(circle(2).circumference).toBe(12.56);
   // Teste se dentro do objeto retornado, a função retorna uma key com value igual a área correta para um círculo de raio 3.
+  expect(circle(3).area).toBeCloseTo(28.26);
   // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
 });
